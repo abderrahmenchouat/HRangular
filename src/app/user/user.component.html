@@ -1,0 +1,23 @@
+
+  <form (submit)="onSignup(signupForm)" #signupForm="ngForm" >
+
+    <input matInput name="user_email" ngModel type="user_email" placeholder="E-Mail" #user_email="ngModel" required email>
+      <!-- <mat-error *ngIf="user_email.invalid">Please enter a valid email.</mat-error> -->
+
+      <input matInput type="password" name="password" ngModel matInput placeholder="Password" #passwordInput="ngModel" required>
+      <!-- <mat-error *ngIf="passwordInput.invalid">Please enter a valid password.</mat-error> -->
+
+      <input matInput name="user_first_name" ngModel type="user_first_name" placeholder="First Name" #user_first_name="ngModel" required>
+      <!-- <mat-error *ngIf="user_first_name.invalid">First name is required.</mat-error> -->
+
+      <input matInput name="user_middle_name" ngModel type="user_middle_name" placeholder="Middle Name" #user_middle_name="ngModel">
+
+      <input matInput name="user_last_name" ngModel type="user_last_name" placeholder="Last Name" #user_last_name="ngModel" required>
+      <!-- <mat-error *ngIf="user_last_name.invalid">Last name is required.</mat-error> -->
+
+      <input matInput name="user_phone" ngModel type="user_phone" placeholder="Phone Number" #user_phone="ngModel" required>
+      <!-- <mat-error *ngIf="user_phone.invalid">Phone number is required.</mat-error> -->
+
+      <button mat-raised-button color="accent" type="submit" >Signup</button>
+  </form>
+

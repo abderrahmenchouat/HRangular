@@ -1,0 +1,25 @@
+import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+
+@Component({
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.css']
+})
+export class HeaderComponent implements OnInit {
+
+  public userIsAuthenticated: boolean = false;
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+  onLogin(form: NgForm){
+    if (form.invalid) {
+      return;
+    }
+    console.log(form.value.email + "  ---  " + form.value.password);
+  }
+
+}
