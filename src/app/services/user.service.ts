@@ -16,7 +16,7 @@ const BACKEND_URL = environment.apiUrl + "/users/";
 export class UserService {
 
   users: User[] = [];
-  private usersUpdated = new Subject<{users: User[]; userCount: number}>();
+  private usersUpdated = new Subject<{ users: User[]; userCount: number }>();
   userData: any;
 
   constructor(private http: HttpClient, private router: Router) {
@@ -26,7 +26,7 @@ export class UserService {
 
 
 
-  getUsers() : User[] {
+  getUsers(): User[] {
     this.http.get(BACKEND_URL).subscribe(userData => {
       this.userData = userData;
       this.users = this.userData;
@@ -42,33 +42,16 @@ export class UserService {
 
 
 
-  addUser(
-    user_email: string,
-    password: string,
-    user_first_name: string,
-    user_middle_name: string,
-    user_last_name: string,
-    user_phone: string
-  ) {
-
-    let user: newUser = {
-      user_email: user_email,
-      password: password,
-      user_first_name: user_first_name,
-      user_middle_name: user_middle_name,
-      user_last_name: user_last_name,
-      user_phone: user_phone
-    }
-
+  addUser(user: User) {
     console.log(user);
     this.http
-    .post<{ user: newUser }>(
-      BACKEND_URL,
-      user
-    )
-    .subscribe(responseData => {
-      console.log(responseData);
-    });
+      .post<{ user: newUser }>(
+        BACKEND_URL,
+        user
+      )
+      .subscribe(responseData => {
+        console.log(responseData);
+      });
   }
 
 

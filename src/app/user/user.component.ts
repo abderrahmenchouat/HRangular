@@ -20,14 +20,12 @@ export class UserComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
 
   }
-  // registerForm: NgForm
-  onSignup(form: NgForm) {
-    if (form.invalid) {
+
+  onSignup(registerForm: NgForm) {
+    if (registerForm.invalid) {
       return;
     }
-
-    console.log(this.userService.addUser(form.value.user_email, form.value.password, form.value.user_first_name, form.value.user_middle_name, form.value.user_last_name, form.value.user_phone));
-    // this.router.navigate(["/"]);
+    console.log(this.userService.addUser(registerForm.value));
   }
 
   ngOnDestroy() {
