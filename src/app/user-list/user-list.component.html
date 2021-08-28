@@ -1,13 +1,14 @@
 <mat-accordion multi="true" *ngIf="users.length > 0">
+  <app-user></app-user>
   <mat-expansion-panel *ngFor="let user of users">
     <mat-expansion-panel-header>
       {{ user.user_email }}
     </mat-expansion-panel-header>
-    <p>User Id:  {{ user.user_id }}</p>
-    <p>First Name:  {{ user.user_first_name }}</p>
-    <p>Middle Name:  {{ user.user_middle_name }}</p>
-    <p>Last Name:  {{ user.user_last_name }}</p>
-    <p>Phone Number:  {{ user.user_phone }}</p>
+    <p>User Id: {{ user.user_id }}</p>
+    <p>First Name: {{ user.user_first_name }}</p>
+    <p>Middle Name: {{ user.user_middle_name }}</p>
+    <p>Last Name: {{ user.user_last_name }}</p>
+    <p>Phone Number: {{ user.user_phone }}</p>
     <mat-action-row>
       <!-- <a mat-button color="primary" [routerLink]="['/edit', post.id]">EDIT</a> -->
       <button mat-button color="warn" (click)="onDelete(user.user_id)">DELETE</button>

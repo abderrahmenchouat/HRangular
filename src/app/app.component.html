@@ -1,3 +1,31 @@
-<app-header></app-header>
-<app-user></app-user>
-<app-user-list></app-user-list>
+<div class="page-wrapper">
+
+  <!-- MENU SIDEBAR/HEADER-->
+  <app-header></app-header>
+  <!-- END MENU SIDEBAR-->
+
+  <!-- PAGE CONTAINER-->
+  <div class="page-container">
+
+    <!-- MAIN CONTENT-->
+    <router-outlet></router-outlet>
+    <!-- <app-user></app-user>
+    <app-user-list></app-user-list> -->
+    <ul>
+      <li><a routerLink="/users" class="mt-5">User List</a></li>
+      <li><a routerLink="/" class="mt-5">Back To Main</a></li>
+      <li><a routerLink="/usersregistration" class="mt-5">User Registration</a></li>
+
+    </ul>
+
+  </div>
+</div>
+
+<!-- ENDS PAGE CONTAINER -->
+<footer>
+  <ul>
+    <li><a href="#">About Us</a></li>
+    <li><a href="#">Contact Us</a></li>
+    <li><a href="#">Help</a></li>
+  </ul>
+</footer>

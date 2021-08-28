@@ -1,17 +1,25 @@
 <mat-toolbar color="primary">
+  <button mat-icon-button>
+    <mat-icon>menu</mat-icon>
+  </button>
+  Main Menu
   <span class="spacer"></span>
   <ul>
 
-  <form (submit)="onLogin(loginForm)" #loginForm="ngForm" >
+
+    <form (submit)="onLogin(loginForm)" #loginForm="ngForm">
 
       <input matInput name="email" ngModel type="email" placeholder="E-Mail" #emailInput="ngModel" required email>
       <!-- <mat-error *ngIf="emailInput.invalid">Please enter a valid email.</mat-error> -->
 
-      <input matInput type="password" name="password" ngModel matInput placeholder="Password" #passwordInput="ngModel" required>
+      <input matInput type="password" name="password" ngModel matInput placeholder="Password" #passwordInput="ngModel"
+        required>
       <!-- <mat-error *ngIf="passwordInput.invalid">Please enter a valid password.</mat-error> -->
 
-      <button mat-raised-button color="accent" type="submit" >Login</button>
-  </form>
+      <button mat-raised-button color="accent" type="submit">Login</button>
+    </form>
 
   </ul>
+
 </mat-toolbar>
+<!-- <app-navpanel> </app-navpanel> -->

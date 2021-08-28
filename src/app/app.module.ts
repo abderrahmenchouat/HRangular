@@ -11,19 +11,24 @@ import { UserListComponent } from './user-list/user-list.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { AngularMaterialModule } from "./angular-material.module";
-import {MatInputModule} from '@angular/material/input';
-import {MatButtonModule} from '@angular/material/button';
-import {MatCardModule} from '@angular/material/card';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatExpansionModule} from '@angular/material/expansion';
-import {MatPaginatorModule} from '@angular/material/paginator';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { NavpanelComponent } from './panels/navpanel/navpanel.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
     HeaderComponent,
-    UserListComponent
+    UserListComponent,
+    NavpanelComponent
   ],
   imports: [
     BrowserModule,
@@ -36,8 +41,10 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatCardModule,
     MatToolbarModule,
     MatExpansionModule,
-    MatPaginatorModule
-    // AngularMaterialModule
+    MatPaginatorModule,
+    MatSidenavModule,
+    MatIconModule
+    //AngularMaterialModule
 
   ],
   providers: [],
