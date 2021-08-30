@@ -1,0 +1,16 @@
+<mat-toolbar color="primary">
+  <button class="menu-button" mat-button [matMenuTriggerFor]="menu">Menu</button>
+  <mat-menu #menu="matMenu">
+    <div><a routerLink="/login"><button mat-menu-item class="btn btn-success">Login</button></a></div>
+    <div><a routerLink="/admin"><button mat-menu-item class="btn btn-success">Admin</button></a></div>
+    <div><a routerLink="/manager"><button mat-menu-item class="btn btn-success">Manager</button></a></div>
+    <div><a routerLink="/users"><button mat-menu-item class="btn btn-success">User</button></a></div>
+    <div><a routerLink="/usersregistration"><button mat-menu-item class="btn btn-success">User
+          Registration</button></a>
+    </div>
+    <div><a routerLink="/"><button mat-menu-item class="btn btn-success">Home</button></a></div>
+
+  </mat-menu>
+  <span class="spacer"></span>
+  <h1>HRAngular</h1>
+</mat-toolbar>

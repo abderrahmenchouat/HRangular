@@ -35,12 +35,12 @@ export class UserListComponent implements OnInit, OnDestroy {
     this.usersPerPage = pageData.pageSize;
   }
 
-  onDelete(user_id: number){
+  onDelete(user_id: number) {
     console.log("attempt to delete user_id: " + user_id.toString());
     this.http.delete("http://localhost:3000/api/users?user_id=" + user_id.toString()).subscribe(response => console.log(response));
   }
 
-  getUsers(){
+  getUsers() {
     console.log("here");
     console.log(this.userService.getUsers());
 
@@ -52,7 +52,9 @@ export class UserListComponent implements OnInit, OnDestroy {
       this.totalUsers = this.users.length;
       console.log(this.users);
       console.log(this.totalUsers);
-  });
+    });
+    // this.ngOnInit();
+
   }
 
   ngOnDestroy() {

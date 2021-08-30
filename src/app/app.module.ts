@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { UserComponent } from './user/user.component';
-import { HeaderComponent } from './header/header.component';
+import { HeaderComponent } from './panels/header/header.component';
 import { UserListComponent } from './user-list/user-list.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -19,8 +19,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
-import { NavpanelComponent } from './panels/navpanel/navpanel.component';
 import { MatMenuModule } from '@angular/material/menu';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -29,7 +29,7 @@ import { MatMenuModule } from '@angular/material/menu';
     UserComponent,
     HeaderComponent,
     UserListComponent,
-    NavpanelComponent
+    LoginComponent
   ],
   imports: [
     BrowserModule,
