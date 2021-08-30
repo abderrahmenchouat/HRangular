@@ -20,6 +20,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { NavpanelComponent } from './panels/navpanel/navpanel.component';
+import { MatMenuModule } from '@angular/material/menu';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { NavpanelComponent } from './panels/navpanel/navpanel.component';
     MatExpansionModule,
     MatPaginatorModule,
     MatSidenavModule,
-    MatIconModule
+    MatIconModule,
+    MatMenuModule
     //AngularMaterialModule
 
   ],
