@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from '@angular/forms';
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { UserComponent } from './user/user.component';
@@ -20,21 +19,36 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+
+
 import { LoginComponent } from './login/login.component';
+import { RouterModule, Routes } from '@angular/router';
+import { SignupComponent } from './signup/signup.component';
 
+const routes: Routes = [
+  { path: 'users', component: UserListComponent },
+  { path: 'usersregistration', component: UserComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'signup', component: SignupComponent },
+  { path: '', redirectTo: '/', pathMatch: 'full' },
+  { path: '**', redirectTo: '/', pathMatch: 'full' },
 
+  //{path: '', redirectTo: '/users', pathMatch: 'full'},
+];
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
     HeaderComponent,
     UserListComponent,
-    LoginComponent
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
+    RouterModule.forRoot(routes),
     FormsModule,
-    AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
     MatInputModule,
@@ -45,7 +59,8 @@ import { LoginComponent } from './login/login.component';
     MatPaginatorModule,
     MatSidenavModule,
     MatIconModule,
-    MatMenuModule
+    MatMenuModule,
+    MatProgressSpinnerModule
     //AngularMaterialModule
 
   ],
